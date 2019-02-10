@@ -31,6 +31,9 @@ if __name__ == "__main__":
                 elif user_input == "d":
                     tasks = user.search_by_date_range()
                     user.display_tasks(tasks)
+                elif user_input == "e":
+                    tasks = user.search_by_date_range()
+                    user.display_tasks(tasks)
                 elif user_input.lower() == "f":
                     break
                 else:
