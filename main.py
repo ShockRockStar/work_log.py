@@ -7,6 +7,7 @@ if __name__ == "__main__":
     user = User.create_or_get_user_from_file(username)
     
     while True:
+        
         menu.show_main_menu(user.username)
         user_input = input("***: ")
         if user_input.lower() == "a":
@@ -29,10 +30,7 @@ if __name__ == "__main__":
                     tasks = user.search_by_keywords()
                     user.display_tasks(tasks)
                 elif user_input == "d":
-                    tasks = user.search_by_date_range()
-                    user.display_tasks(tasks)
-                elif user_input == "e":
-                    tasks = user.search_by_date_range()
+                    tasks = user.search_by_pattern()
                     user.display_tasks(tasks)
                 elif user_input.lower() == "f":
                     break
@@ -45,4 +43,3 @@ if __name__ == "__main__":
             break
         else:
             print("Not a valid option, try another selection.")
-            
